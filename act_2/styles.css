@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #80c8ff, #0073e6); 
+    height: 100vh; 
+}
+
+
+.header {
+    background-color: #80c8ff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    
+}
+
+.main {
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.card .balance {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    
+}
+
+.action {
+    text-align: center;
+}
+
+.action i {
+    font-size: 24px;
+    color: #0073e6;
+}
+
+.action span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.footer {
+    background-color: #0073e671;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.footer .icon {
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer .icon i {
+    font-size: 20px;
+    color: #0073e6;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 10;
+    
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu a span {
+    margin-left: auto;
+    color: #007bff;
+}
+
+.menu a i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.menu a:hover {
+    background-color: #f9f9f9;
+}
+
+.menu .close-btn {
+    font-size: 24px;
+    color: #0073e6;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 18px;
+    }
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.balance {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.balance small {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    flex: 1;
+    margin: 0 5px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+.btn i {
+    font-size: 1.5em;
+    color: #007BFF;
+}
+
+.btn br {
+    display: none;
+}
+
+.btn:hover i {
+    color: #0056b3;
+}
+
+
+
+.login-btn {
+    width: 100%; 
+    height: 7%; 
+    background-color: #ffffff; 
+    color: #000000;
+    border: 2px solid #006eff; 
+    border-radius: 20px; 
+    cursor: pointer;
+    font-size: 0.9em; 
+    font-weight: 500; 
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    outline: none;
+}
+
+/* Borde inferior azul, verde-azul y amarillo */
+.login-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 0;
+    width: 100%;
+    height: 25%; 
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, 
+        hsl(210, 100%, 63%), /* Azul */
+        hsl(195, 100%, 63%), /* Verde-Azul */
+        hsl(61, 100%, 63%)  /* Amarillo */
+    );
+    background-size: 200%;
+    filter: blur(calc(0.9 * 0.4rem)); /* Efecto de brillo */
+    animation: rainbow 3s infinite linear; /* Animación continua */
+}
+
+/* Efecto hover */
+.login-btn:hover {
+    transform: scale(1.05); 
+}
+
+/* Animación del borde */
+@keyframes rainbow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* Variables del arcoíris (solo los necesarios) */
+:root {
+    --color-3: 210 100% 63%; /* Azul */
+    --color-4: 195 100% 63%; /* Verde-Azul */
+    --color-5: 90 100% 63%;  /* Amarillo */
+}
